@@ -1,0 +1,26 @@
+{% extends "now-prototype-it-design-system/layouts/website.njk" %}
+
+{% block content %}
+    <h1>This is a form</h1>
+    <p>Please consider your answers carefully as any wrong answers will be held against you indefinitely.</p>
+    <form action="?" method="post">
+        {{ nowPrototypeItTextInput({
+            nameAndId: 'example1',
+            label: 'Give me an example of something',
+            hintText: 'This is a hint'
+        }) }}
+        {{ nowPrototypeItRadioButtons({
+            nameAndId: 'example2',
+            label: 'Here are some options',
+            options: [
+                { value: 'option1', text: 'Option 1' },
+                { value: 'option2', text: 'Option 2' },
+                { value: 'option3', text: 'Option 3' }
+            ],
+            value: 'option2'
+        }) }}
+        {{ nowPrototypeItSubmitButton({
+            text: 'I\'ve finished filling out this form'
+        }) }}
+    </form>
+{% endblock %}

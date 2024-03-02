@@ -1,0 +1,23 @@
+{% from "now-prototype-it-design-system/components/label.njk" import nowPrototypeItLabel %}
+
+{% macro nowPrototypeItRadioButtons(params) %}
+  <div class="nowprototypeit-form-item-wrapper">
+    {{ nowPrototypeItLabel({
+      for: params.nameAndId,
+      text: params.label,
+      hintText: params.hintText
+    }) }}
+    {% for option in params.options %}
+      <p>
+        <input
+          type="radio"
+          {% if option.value === params.value %}checked="checked"{% endif %}
+          name="{{ params.nameAndId }}"
+          value="{{ option.value }}"
+          id="{{ params.nameAndId }}-{{ loop.index }}"
+        />
+        <label class="nowprototypeit-form-label-for-radio" for="{{ params.nameAndId }}-{{ loop.index }}">{{ option.text }}</label>
+      </p>
+    {% endfor %}
+  </div>
+{% endmacro %}

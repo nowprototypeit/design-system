@@ -1,0 +1,62 @@
+{% set sideNavLinks = [
+    {
+        text: "Link 1",
+        url: "#",
+        isCurrentPage: true
+    },
+    {
+        text: "Link 2",
+        url: "#"
+    },
+    {
+        text: "Link 3",
+        url: "#"
+    }
+] %}
+
+{% extends "now-prototype-it-design-system/layouts/manage-prototype/page-with-side-nav.njk" %}
+
+{% block introduction %}
+    <h1>This is the start of the page</h1>
+    <p>We usually have some explanation here</p>
+{% endblock %}
+
+{% block mainPanel %}
+    <ul class="nowprototypeit-manage-prototype-plugin-list"
+        data-plugin-group-status="{{ status }}">
+        {{ nowPrototypeItPluginCard({
+            plugin: {
+                name: "Plugin 1",
+                description: "This is a description of the plugin",
+                url: "#",
+                isInstalled: true,
+                installedVersion: "1.0.0",
+                updateAvailable: true
+            }
+        }) }}
+        {{ nowPrototypeItPluginCard({
+            plugin:{
+                name: "Plugin 2",
+                description: "Some people enter a long description, others enter a short description.  It's up to them.",
+                url: "#",
+                status: "active"
+            }
+        }) }}
+        {{ nowPrototypeItPluginCard({
+            plugin:{
+                name: "Plugin 3 has a really long name which is unfortanate",
+                scope: "Of course they have a scope",
+                description: "They also have a really long description which is also unfortanate.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                url: "#"
+            }
+        }) }}
+        {{ nowPrototypeItPluginCard({
+            plugin:{
+                name: "Plugin 4",
+                url: "#",
+                description: "No comment"
+            }
+        }) }}
+
+    </ul>
+{% endblock %}
