@@ -7,7 +7,8 @@
   ],
   "assets": [
     "/assets/images",
-    "/assets/icons"
+    "/assets/icons",
+    "/assets/fonts"
   ],
   "nunjucksPaths":  "/nunjucks",
   "nunjucksMacros": [
@@ -30,6 +31,10 @@
     {
       "macroName": "nowPrototypeItPluginCard",
       "importFrom": "now-prototype-it-design-system/components/plugin-card.njk"
+    },
+    {
+      "macroName": "nowPrototypeItHeader",
+      "importFrom": "now-prototype-it-design-system/components/header.njk"
     }
 
   ],
