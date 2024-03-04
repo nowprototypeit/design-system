@@ -108,10 +108,10 @@
   }
 
   code pre {
-    font-family: "Cutive Mono", D050000L, monospace;
+    font-family: "Cutive Mono", monospace;
     border: 3px solid $featureColour;
     padding: 1em;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 }
 
@@ -147,8 +147,8 @@
     height: 1px;
     position: absolute;
     bottom: 0.7em;
-    left: $standardSpace/4;
-    right: $standardSpace/4;
+    left: calc($standardSpace/4);
+    right: calc($standardSpace/4);
   }
 
   &.nowprototypeit-manage-prototype-navigation__list-item--current a:after {
@@ -174,7 +174,7 @@
     font-size: 0.9rem;
     font-weight: 400;
     padding: 0.3em;
-    margin: $standardSpace/4;
+    margin: calc($standardSpace/4);
     border: 4px solid transparent;
     color: inherit;
     text-decoration: none;

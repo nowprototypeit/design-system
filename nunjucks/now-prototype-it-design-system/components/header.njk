@@ -1,9 +1,9 @@
-{% from "now-prototype-it-design-system/components/nav" import nowPrototypeItNav %}
+{% from "now-prototype-it-design-system/components/nav.njk" import nowPrototypeItNav %}
 
 {% macro nowPrototypeItHeader(config) %}
   <header class="nowprototypeit-header">
-    <h3 class="nowprototypeit-brand-header"><a href="https://nowprototype.it/"><img
-            src="{{ config.assetPath }}/images/logo.png" alt="Now Prototype It"/></a></h3>
+    <h3 class="nowprototypeit-brand-header"><a href="{{ config.logoLink }}"><img
+            src="{{ config.nowPrototypeItDesignSystemAssetsPath }}/images/logo.png" alt="Now Prototype It"/></a></h3>
     {% if config.mainNavItems %}
       {{ nowPrototypeItNav({
         items: config.mainNavItems,

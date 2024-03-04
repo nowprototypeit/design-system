@@ -1,4 +1,12 @@
-{%- set assetPath = assetPath | default('/plugin-assets/%40nowprototypeit%2Fdesign-system/assets') -%}
+{%- set nowPrototypeItAssetsPath = nowPrototypeItAssetsPath | default('/plugin-assets/%40nowprototypeit%2Fdesign-system/assets') -%}
+{%- set nowPrototypeItDesignSystemAssetsPath = nowPrototypeItDesignSystemAssetsPath | default(nowPrototypeItAssetsPath) %}
+{% from "now-prototype-it-design-system/components/label.njk" import nowPrototypeItLabel %}
+{% from "now-prototype-it-design-system/components/radio-buttons.njk" import nowPrototypeItRadioButtons %}
+{% from "now-prototype-it-design-system/components/submit-button.njk" import nowPrototypeItSubmitButton %}
+{% from "now-prototype-it-design-system/components/text-input.njk" import nowPrototypeItTextInput %}
+{% from "now-prototype-it-design-system/components/plugin-card.njk" import nowPrototypeItPluginCard %}
+{% from "now-prototype-it-design-system/components/header.njk" import nowPrototypeItHeader %}
+{% from "now-prototype-it-design-system/components/nav.njk" import nowPrototypeItNav %}
 
 <!DOCTYPE html>
 <html class="nowprototypeit-page no-js {{ htmlClasses }}">
@@ -8,25 +16,30 @@
   {% block head %}
     {% block meta %}{% endblock %}
     {% block stylesheets %}
-      {% include "prototype-core/includes/stylesheets.njk" %}
+      {% if isRunningInPrototypeKit %}
+        {% include "prototype-core/includes/stylesheets.njk" %}
+      {% else %}
+        <link rel="stylesheet" href="{{ nowPrototypeItAssetsPath }}/style.css">
+      {% endif %}
     {% endblock %}
   {% endblock %}
   <title>
     {% block pageTitle %}
-      {% if pageName %}{{ pageName }} - {% endif %}{{ serviceName }} - Now Prototype It
+      {% if pageName %}{{ pageName }} - {% endif %} Now Prototype It
     {% endblock %}
   </title>
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath }}/icons/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ assetPath }}/icons/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ assetPath }}/icons/favicon-16x16.png"/>
-  <link rel="manifest" href="{{ assetPath }}/icons/site.webmanifest"/>
-  <link rel="mask-icon" href="{{ assetPath }}/icons/safari-pinned-tab.svg" color="#5bbad5"/>
-  <link rel="shortcut icon" href="{{ assetPath }}/icons/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/favicon-16x16.png"/>
+  <link rel="manifest" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/site.webmanifest"/>
+  <link rel="mask-icon" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/safari-pinned-tab.svg" color="#5bbad5"/>
+  <link rel="shortcut icon" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/favicon.ico"/>
 </head>
 <body class="{{ bodyClasses }}">
 {% block header %}
   {{ nowPrototypeItHeader({
-    assetPath: assetPath,
+    logoLink: nowPrototypeItLogoLink,
+    nowPrototypeItDesignSystemAssetsPath: nowPrototypeItDesignSystemAssetsPath,
     mainNavItems: headerMainNavItems
   }) }}
 {% endblock %}
@@ -52,7 +65,9 @@
 {% endblock %}
 {% block bodyEnd %}
   {% block scripts %}
-    {% include "prototype-core/includes/scripts.njk" %}
+    {% if isRunningInPrototypeKit %}
+      {% include "prototype-core/includes/scripts.njk" %}
+    {% endif %}
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 {% endblock %}
