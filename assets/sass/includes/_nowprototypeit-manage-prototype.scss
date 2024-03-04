@@ -125,11 +125,8 @@
     @media screen and (min-width: $tinyWidth) {
       grid-template-columns: 1fr 1fr;
     }
-    @media screen and (min-width: $midWidth) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
     @media screen and (min-width: $fullWidth) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
@@ -220,18 +217,6 @@
 
   .sub-nav__current {
     border-left-color: $featureColour;
-  }
-
-  a,
-  a:hover,
-  a:visited,
-  a:focus {
-    color: inherit;
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: $featureColour;
   }
 
   .nowprototypeit-form-item-wrapper + .nowprototypeit-form-item-wrapper {

@@ -3,6 +3,8 @@
 <!DOCTYPE html>
 <html class="nowprototypeit-page no-js {{ htmlClasses }}">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {% block head %}
     {% block meta %}{% endblock %}
     {% block stylesheets %}
@@ -28,15 +30,24 @@
     mainNavItems: headerMainNavItems
   }) }}
 {% endblock %}
+{% block headerNav %}
+  {% if headerSubNavItems | length > 0 %}
+    {{ nowPrototypeItNav({
+      items: headerSubNavItems,
+      listClasses: "nowprototypeit-manage-prototype-navigation__list",
+      itemClasses: "nowprototypeit-manage-prototype-navigation__list-item",
+      currentItemClasses: "nowprototypeit-manage-prototype-navigation__list-item--current"
+    }) }}
+  {% endif %}
+{% endblock %}
 <main>
-  {% block headerNav %}{% endblock %}
   {% block content %}{% endblock %}
 </main>
 {% block footer %}
   <footer class="nowprototypeit-footer">
-    <p>You're using a GOV.UK Kit from Now Prototype It, find out more at <a href="https://nowprototype.it/govuk"
-                                                                            target="_blank">nowprototype.it/govuk</a>.
-    </p>
+    {% block footerContent %}
+    {% endblock %}
+    <p class="nowprototypeit-footer-copyright"><small>&copy;2024 Now Prototype It</small></p>
   </footer>
 {% endblock %}
 {% block bodyEnd %}

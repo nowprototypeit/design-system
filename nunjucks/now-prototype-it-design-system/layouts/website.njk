@@ -1,15 +1,19 @@
+{% set headerSubNavSelectedLink = headerSubNavSelectedLink | default(1) %}
 {% set headerSubNavItems = [
   {
     url: "/govuk",
-    name: "Prototyping for GOV.UK"
+    name: "Prototyping for GOV.UK",
+    isCurrentPage: headerSubNavSelectedLink == 1
   },
   {
     url: "/govuk/hosting",
-    name: "Hosting for GOV.UK Prototypes"
+    name: "Hosting for GOV.UK Prototypes",
+    isCurrentPage: headerSubNavSelectedLink == 2
   },
   {
     url: "/govuk/support",
-    name: "Support"
+    name: "Support",
+    isCurrentPage: headerSubNavSelectedLink == 3
   }
 ] %}
 

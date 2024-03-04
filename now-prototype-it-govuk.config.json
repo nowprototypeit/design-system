@@ -3,7 +3,7 @@
     "description": "This plugin is used internally for designing Now Prototype It pages, we aim to do everything in a pretty standard way so feel free to take ideas from this plugin if they help you."
   },
   "sass": [
-    "/assets/sass/styles.scss"
+    "/assets/sass/_for-use-in-now-prototype-it-kit.scss"
   ],
   "assets": [
     "/assets/images",
@@ -35,8 +35,11 @@
     {
       "macroName": "nowPrototypeItHeader",
       "importFrom": "now-prototype-it-design-system/components/header.njk"
+    },
+    {
+      "macroName": "nowPrototypeItNav",
+      "importFrom": "now-prototype-it-design-system/components/nav.njk"
     }
-
   ],
   "templates": [
     {

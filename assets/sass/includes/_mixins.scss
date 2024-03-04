@@ -1,0 +1,12 @@
+@mixin now-prototype-it-body-font {
+  color: $fontColor;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+@mixin now-prototype-it-title-font {
+  font-family: Dosis, sans-serif;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
