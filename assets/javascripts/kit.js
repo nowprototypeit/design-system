@@ -16,7 +16,7 @@ window.nowPrototypeItGOVUK = {
 
 window.GOVUKPrototypeKit = {
   majorVersion: 13,
-  documentReady: window.nowPrototypeItGOVUK.documentReady()
+  documentReady: window.nowPrototypeItGOVUK.documentReady
 }
 
 // Warn about using the kit in production

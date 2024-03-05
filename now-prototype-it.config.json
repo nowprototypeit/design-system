@@ -1,0 +1,94 @@
+{
+  "version-2024-03": {
+    "meta": {
+      "description": "This plugin is used internally for designing Now Prototype It pages, we aim to do everything in a pretty standard way so feel free to take ideas from this plugin if they help you."
+    },
+    "settings": [
+      {
+        "value": "{{PLUGIN_ASSETS_URL_CONTEXT}}/assets",
+        "variableNames": {
+          "sass": "now-prototype-it-design-system-assets-url",
+          "nunjucks": "nowPrototypeItDesignSystemAssetsPath"
+        }
+      },
+      {
+        "value": "{{SCRIPTS_NJK_INCLUDE}}",
+        "variableNames": {
+          "nunjucks": "nowPrototypeItStylesheetInclude"
+        }
+      },
+      {
+        "value": "{{STYLES_NJK_INCLUDE}}",
+        "variableNames": {
+          "nunjucks": "nowPrototypeItScriptInclude"
+        }
+      }
+    ],
+    "sass": [
+      "/assets/sass/styles.scss"
+    ],
+    "assets": [
+      "/assets/images",
+      "/assets/icons",
+      "/assets/fonts"
+    ],
+    "nunjucksPaths": "/nunjucks",
+    "nunjucksMacros": [
+      {
+        "macroName": "nowPrototypeItLabel",
+        "importFrom": "now-prototype-it-design-system/components/label.njk"
+      },
+      {
+        "macroName": "nowPrototypeItRadioButtons",
+        "importFrom": "now-prototype-it-design-system/components/radio-buttons.njk"
+      },
+      {
+        "macroName": "nowPrototypeItSubmitButton",
+        "importFrom": "now-prototype-it-design-system/components/submit-button.njk"
+      },
+      {
+        "macroName": "nowPrototypeItTextInput",
+        "importFrom": "now-prototype-it-design-system/components/text-input.njk"
+      },
+      {
+        "macroName": "nowPrototypeItPluginCard",
+        "importFrom": "now-prototype-it-design-system/components/plugin-card.njk"
+      },
+      {
+        "macroName": "nowPrototypeItHeader",
+        "importFrom": "now-prototype-it-design-system/components/header.njk"
+      },
+      {
+        "macroName": "nowPrototypeItNav",
+        "importFrom": "now-prototype-it-design-system/components/nav.njk"
+      }
+    ],
+    "templates": [
+      {
+        "name": "Standard Page",
+        "path": "/templates/blank-page-no-nav.njk",
+        "type": "nunjucks"
+      },
+      {
+        "name": "Manage Prototype form",
+        "path": "/templates/manage-prototype/form.njk",
+        "type": "nunjucks"
+      },
+      {
+        "name": "Manage Prototype plugins",
+        "path": "/templates/manage-prototype/plugin-page.njk",
+        "type": "nunjucks"
+      },
+      {
+        "name": "Website homepage",
+        "path": "/templates/website/homepage.njk",
+        "type": "nunjucks"
+      }
+    ],
+    "importNunjucksMacrosInto": [
+      "/nunjucks/now-prototype-it-design-system/layouts/standard.njk",
+      "/nunjucks/now-prototype-it-design-system/layouts/website.njk",
+      "/nunjucks/now-prototype-it-design-system/layouts/manage-prototype.njk"
+    ]
+  }
+}

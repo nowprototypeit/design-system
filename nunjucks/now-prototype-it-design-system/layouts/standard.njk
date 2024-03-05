@@ -1,5 +1,3 @@
-{%- set nowPrototypeItAssetsPath = nowPrototypeItAssetsPath | default('/plugin-assets/%40nowprototypeit%2Fdesign-system/assets') -%}
-{%- set nowPrototypeItDesignSystemAssetsPath = nowPrototypeItDesignSystemAssetsPath | default(nowPrototypeItAssetsPath) %}
 {% from "now-prototype-it-design-system/components/label.njk" import nowPrototypeItLabel %}
 {% from "now-prototype-it-design-system/components/radio-buttons.njk" import nowPrototypeItRadioButtons %}
 {% from "now-prototype-it-design-system/components/submit-button.njk" import nowPrototypeItSubmitButton %}
@@ -11,13 +9,11 @@
 <!DOCTYPE html>
 <html class="nowprototypeit-page no-js {{ htmlClasses }}">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {% block head %}
     {% block meta %}{% endblock %}
     {% block stylesheets %}
-      {% if isRunningInPrototypeKit %}
-        {% include "prototype-core/includes/stylesheets.njk" %}
+      {% if nowPrototypeItStylesheetInclude %}
+        {% include nowPrototypeItStylesheetInclude %}
       {% else %}
         <link rel="stylesheet" href="{{ nowPrototypeItAssetsPath }}/style.css">
       {% endif %}
@@ -65,8 +61,8 @@
 {% endblock %}
 {% block bodyEnd %}
   {% block scripts %}
-    {% if isRunningInPrototypeKit %}
-      {% include "prototype-core/includes/scripts.njk" %}
+    {% if nowPrototypeItScriptInclude %}
+      {% include nowPrototypeItScriptInclude %}
     {% endif %}
     {% block pageScripts %}{% endblock %}
   {% endblock %}
