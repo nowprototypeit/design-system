@@ -4,13 +4,13 @@
   {% if params.href %}
     <a
       href="{{ params.href }}"
-      class="nowprototypeit-submit-button-link"
+      class="nowprototypeit-form-submit-button-link"
       id="{{ params.nameAndId }}"
     >{{ params.text }}</a>
   {% else %}
   <button
     type="submit"
-    class="nowprototypeit-submit-button"
+    class="nowprototypeit-form-submit-button"
     name="{{ params.nameAndId }}"
     id="{{ params.nameAndId }}"
     {% if params.formAction %}

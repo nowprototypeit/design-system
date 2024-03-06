@@ -8,7 +8,7 @@
       hintText: params.hintText
     }) }}
     {% for option in params.options %}
-      <p>
+      <div class="nowprototypeit-radio-wrapper">
         <input
           type="radio"
           {% if option.value === params.value %}checked="checked"{% endif %}
@@ -17,7 +17,7 @@
           id="{{ params.nameAndId }}-{{ loop.index }}"
         />
         <label class="nowprototypeit-form-label-for-radio" for="{{ params.nameAndId }}-{{ loop.index }}">{{ option.text }}</label>
-      </p>
+      </div>
     {% endfor %}
   </div>
 {% endmacro %}

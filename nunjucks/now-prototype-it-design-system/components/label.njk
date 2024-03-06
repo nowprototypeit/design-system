@@ -1,5 +1,5 @@
 {% macro nowPrototypeItLabel(params) %}
-  <p class="nowprototypeit-form-label"><label {% if params.for %}for="{{ params.for }}"{% endif %} class="nowprototypeit-form-label">
+  <p class="nowprototypeit-form-label {{ params.classes }} {% if params.hintText %} nowprototypeit-form-label-with-hint {% endif %}"><label {% if params.for %}for="{{ params.for }}"{% endif %} class="nowprototypeit-form-label">
     {{ params.text }}
   </label></p>
   {% if params.hintText %}
