@@ -16,9 +16,16 @@
     padding: 2em;
     min-height: 70vh;
 
-    > h1:first-child {
+    > h1:first-child,
+    > h3:first-child {
       margin-top: 0;
     }
+  }
+}
+
+.nowprototypeit-no-top-margin-on-first-element > :first-child {
+  .nowprototypeit-page &, & {
+    margin-top: 0;
   }
 }
 
@@ -179,10 +186,11 @@
   margin: 0;
 }
 
-.nowprototypeit-page-item {
-  :before {
+.nowprototypeit-page-item,
+.nowprototypeit-bullet-list li {
+  &:before {
     content: ' - ';
-    color: $mediumFontColor;
+    color: inherit;
   }
 }
 
@@ -196,7 +204,7 @@
 
 .nowprototypeit-manage-prototype-navigation__list-item {
   display: inline-block;
-  line-height: 3;
+  line-height: 2;
   position: relative;
 
   a:after {
@@ -204,7 +212,7 @@
     display: inline-block;
     height: 1px;
     position: absolute;
-    bottom: 0.7em;
+    bottom: 0.3em;
     left: calc($standardSpace/4);
     right: calc($standardSpace/4);
   }
@@ -318,13 +326,19 @@
 }
 
 .now-prototype-it-visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  @include visuallyHidden;
+}
+
+
+.nowprototypeit-no-js {
+  .js-only {
+    @include visuallyHidden;
+  }
+}
+.nowprototypeit-js-enabled {
+  .js-hidden {
+    @include visuallyHidden;
+  }
 }
 
 .nowprototypeit-no-top-margin {
@@ -332,4 +346,44 @@
     margin-top: 0;
     padding-top: 0;
   }
+}
+
+.nowprototypeit-sub-nav-item {
+  display: block;
+  padding: calc($standardSpace/4) 0;
+  border-bottom: 1px dotted $darkFeatureColour;
+
+  &.nowprototypeit-sub-nav-item__first {
+    border-top: 1px dotted $darkFeatureColour;
+  }
+
+  &.nowprototypeit-sub-nav-item__current {
+    font-weight: 500;
+  }
+
+  .nowprototypeit-sub-nav-item__subtext {
+    font-size: 0.7rem;
+    opacity: 0.6;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.nowprototypeit-form-item-wrapper {
+  margin-bottom: $standardSpace;
+}
+
+.nowprototypeit-info-box {
+  padding: $standardSpace;
+  border: 2px solid $featureColour;
+  line-height: 1.6;
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+  text-align: center;
+}
+
+.nowprototypeit-form-item-wrapper .nowprototypeit-form-submit-button {
+  margin: 0 auto;
 }

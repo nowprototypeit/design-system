@@ -1,11 +1,18 @@
 {% for link in sideNavLinks %}
-  <div class="sub-nav {% if link.isCurrentPage %}sub-nav__current{%endif%}">
+  <div class="nowprototypeit-sub-nav-item
+{% if link.isCurrentPage %} nowprototypeit-sub-nav-item__current {%endif%}
+{% if loop.index == 1 %} nowprototypeit-sub-nav-item__first {%endif%}">
     {% if not link.isCurrentPage %}
       <a href="{{ link.url }}">
           {{ link.text }}
       </a>
     {% else %}
       {{ link.text }}
+    {% endif %}
+    {% if link.subtext %}
+      <div class="nowprototypeit-sub-nav-item__subtext">
+        {{ link.subtext }}
+      </div>
     {% endif %}
   </div>
 {% endfor %}

@@ -1,5 +1,4 @@
 if (window.Promise) {
-
   (function () {
     const htmlClassList = document.body.parentNode.classList
     htmlClassList.remove('nowprototypeit-no-js')
@@ -9,7 +8,7 @@ if (window.Promise) {
       return parts.map((x, index) => index > 0 ? x[0].toUpperCase() + x.substring(1) : x).join('')
     }
 
-    function setupDomWidgets(domWidgets) {
+    function setupDomWidgets (domWidgets) {
       document.addEventListener('DOMContentLoaded', () => {
         [...document.querySelectorAll('[data-dom-widget]')].forEach(($elem) => {
           const config = {}
@@ -30,11 +29,10 @@ if (window.Promise) {
 
     setupDomWidgets({
       'scroll-to-this-element': ($elem, config) => {
-        $elem.scrollIntoView({behavior: 'smooth'})
+        $elem.scrollIntoView({ behavior: 'smooth' })
       },
       'add-class-on-value-change': ($elem, config) => {
         const originalValue = $elem.value
-        console.log('original value', originalValue)
         $elem.addEventListener('blur', () => {
           console.log('blur', $elem.value, originalValue, $elem.value !== originalValue)
           if ($elem.value !== originalValue) {
@@ -54,10 +52,10 @@ if (window.Promise) {
           $button.addEventListener('change', update)
         })
 
-        function update() {
+        function update () {
           if ($button.checked) {
             $reveal.classList.remove('js-hidden')
-            $reveal.scrollIntoView({behavior: 'smooth'})
+            $reveal.scrollIntoView({ behavior: 'smooth' })
           } else {
             $reveal.classList.add('js-hidden')
           }
