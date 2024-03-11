@@ -207,6 +207,11 @@
     dd {
       font-family: "Cutive Mono", monospace;
       padding-right: 1rem;
+      overflow-wrap: break-word;
+      li {
+        overflow-wrap: anywhere;
+        margin-bottom: 1.5rem;
+      }
     }
     dt, dd {
       border-top: 1px dotted $darkFeatureColour;
