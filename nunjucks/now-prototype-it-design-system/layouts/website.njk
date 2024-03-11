@@ -1,11 +1,21 @@
-{% extends "now-prototype-it-design-system/layouts/standard.njk" %}
+{% set nowPrototypeItLogoLink = nowPrototypeItLogoLink | default('https://nowprototype.it/') %}
+{% set headerSubNavSelectedLink = headerSubNavSelectedLink | default(0) %}
+{% set headerSubNavItems = headerSubNavItems | default([
+  {
+    url: "/govuk",
+    name: "Prototyping for GOV.UK",
+    isCurrentPage: headerSubNavSelectedLink == 1
+  },
+  {
+    url: "/govuk/hosting",
+    name: "Hosting for GOV.UK Prototypes",
+    isCurrentPage: headerSubNavSelectedLink == 2
+  },
+  {
+    url: "/govuk/support",
+    name: "Support",
+    isCurrentPage: headerSubNavSelectedLink == 3
+  }
+]) %}
 
-{% block headerSideNav %}
-  <nav>
-    <ul>
-      <li><a href="/govuk">Prototyping for GOV.UK</a></li>
-      <li><a href="/govuk/hosting">Hosting for GOV.UK Prototypes</a></li>
-      <li><a href="/govuk/support">Support</a></li>
-    </ul>
-  </nav>
-{% endblock %}
+{% extends "now-prototype-it-design-system/layouts/standard.njk" %}
