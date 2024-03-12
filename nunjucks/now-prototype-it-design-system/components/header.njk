@@ -2,8 +2,12 @@
 
 {% macro nowPrototypeItHeader(config) %}
   <header class="nowprototypeit-header">
-    <h3 class="nowprototypeit-brand-header"><a href="{{ config.logoLink }}"><img
-            src="{{ config.nowPrototypeItDesignSystemAssetsPath }}/images/logo.png" alt="Now Prototype It"/></a></h3>
+    <h3 class="nowprototypeit-brand-header {% if config.subText %}nowprototypeit-brand-header--with-sub-text{% endif %}"><a href="{{ config.logoLink }}"><img
+            src="{{ config.nowPrototypeItDesignSystemAssetsPath }}/images/logo.png" alt="Now Prototype It"/></a>
+    {% if config.subText %}
+      <span class="nowprototypeit-brand-sub-text">{{ config.subText }}</span>
+    {% endif %}
+    </h3>
     {% if config.mainNavItems %}
       {{ nowPrototypeItNav({
         items: config.mainNavItems,

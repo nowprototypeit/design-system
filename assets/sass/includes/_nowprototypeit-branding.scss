@@ -123,10 +123,28 @@
     width: 100%;
   }
 
+  .nowprototypeit-brand-header--with-sub-text img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
   h3 {
     .nowprototypeit-page & {
       margin: 1.3rem 0 1rem;
       padding: 0;
+    }
+
+
+    &.nowprototypeit-brand-header--with-sub-text {
+      margin: 0.5rem 0;
+      span {
+        text-align: center;
+        display: block;
+        font-weight: 300;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 1rem;
+      }
     }
   }
 }

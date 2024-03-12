@@ -32,6 +32,9 @@
       "/assets/icons",
       "/assets/fonts"
     ],
+    "scripts": [
+      "/assets/scripts/all.js"
+    ],
     "nunjucksPaths": "/nunjucks",
     "nunjucksMacros": [
       {
