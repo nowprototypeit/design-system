@@ -43,6 +43,7 @@ if (window.Promise) {
         })
       },
       'conditional-reveal': ($elem, config) => {
+        console.log('conditional-reveal', config.fieldId, config.revealId)
         const $button = $elem.querySelector('#' + config.fieldId)
         const $reveal = $elem.querySelector('#' + config.revealId)
         const buttonNameAttr = $button.getAttribute('name')
@@ -53,6 +54,7 @@ if (window.Promise) {
         })
 
         function update () {
+          console.log('updating', $button.checked, $reveal, $button)
           if ($button.checked) {
             $reveal.classList.remove('js-hidden')
             $reveal.scrollIntoView({ behavior: 'smooth' })
@@ -62,7 +64,7 @@ if (window.Promise) {
         }
 
         $button.addEventListener('change', update)
-        update()
+        window.addEventListener('pageshow', update)
       }
     })
   })()
