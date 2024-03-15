@@ -1,0 +1,13 @@
+{
+  "version-2024-03": {
+    "inheritFrom": ["@nowprototypeit/govuk"],
+    "installedPackages": [
+      "__INHERIT__",
+      "@nowprototypeit/design-system"
+    ],
+    "starterFileDirectories": [
+      "__INHERIT__",
+      "now-prototype-it-kit-integration/prototype-starter"
+    ]
+  }
+}

@@ -69,22 +69,22 @@
     "templates": [
       {
         "name": "Standard Page",
-        "path": "/templates/blank-page-no-nav.njk",
+        "path": "now-prototype-it-kit-integration/templates/blank-page-no-nav.njk",
         "type": "nunjucks"
       },
       {
         "name": "Manage Prototype form",
-        "path": "/templates/manage-prototype/form.njk",
+        "path": "now-prototype-it-kit-integration/templates/manage-prototype/form.njk",
         "type": "nunjucks"
       },
       {
         "name": "Manage Prototype plugins",
-        "path": "/templates/manage-prototype/plugin-page.njk",
+        "path": "now-prototype-it-kit-integration/templates/manage-prototype/plugin-page.njk",
         "type": "nunjucks"
       },
       {
         "name": "Website homepage",
-        "path": "/templates/website/homepage.njk",
+        "path": "now-prototype-it-kit-integration/templates/website/homepage.njk",
         "type": "nunjucks"
       }
     ],
