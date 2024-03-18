@@ -439,6 +439,18 @@
   margin-bottom: $standardSpace;
 }
 
+.nowprototypeit-form-item-wrapper-tiny-gap-bottom {
+  button, input, .nowprototypeit-page &, & {
+    margin-bottom: calc($standardSpace/10);
+  }
+}
+
+.nowprototypeit-form-item-wrapper-tiny-gap-top {
+  button, input, .nowprototypeit-page &, & {
+    margin-top: calc($standardSpace/10);
+  }
+}
+
 .nowprototypeit-info-box {
   padding: $standardSpace;
   border: 2px solid $featureColour;
