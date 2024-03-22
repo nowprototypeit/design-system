@@ -27,7 +27,12 @@
     margin-top: 0;
   }
   > form:first-child .nowprototypeit-form-item-wrapper:first-child p {
-    margin-top: 0;
+    p {
+      margin-top: 0;
+    }
+    a {
+      margin-top: 5px;
+    }
   }
 
 }

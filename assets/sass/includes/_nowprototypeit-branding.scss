@@ -27,6 +27,9 @@
   .nowprototypeit-page &, & {
     margin-top: 0;
   }
+  > .nowprototypeit-form-item-wrapper:first-child {
+    margin-top: 5px;
+  }
 }
 
 .nowprototypeit-page,
