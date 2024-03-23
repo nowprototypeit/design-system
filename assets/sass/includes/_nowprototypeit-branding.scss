@@ -471,3 +471,12 @@
 //.nowprototypeit-form-item-wrapper .nowprototypeit-form-submit-button {
 //  margin: 0 auto;
 //}
+
+.nowprototypeit-sub-nav-divider {
+  padding-top: $standardSpace;
+  padding-bottom: $standardSpace;
+}
+
+.nowprototypeit-sub-nav-divider-header {
+  @include now-prototype-it-title-font;
+}
