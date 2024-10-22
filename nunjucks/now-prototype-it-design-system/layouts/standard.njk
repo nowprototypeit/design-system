@@ -1,13 +1,13 @@
-{% from "now-prototype-it-design-system/components/label.njk" import nowPrototypeItLabel %}
-{% from "now-prototype-it-design-system/components/radio-buttons.njk" import nowPrototypeItRadioButtons %}
-{% from "now-prototype-it-design-system/components/submit-button.njk" import nowPrototypeItSubmitButton %}
-{% from "now-prototype-it-design-system/components/text-input.njk" import nowPrototypeItTextInput %}
-{% from "now-prototype-it-design-system/components/plugin-card.njk" import nowPrototypeItPluginCard %}
-{% from "now-prototype-it-design-system/components/header.njk" import nowPrototypeItHeader %}
-{% from "now-prototype-it-design-system/components/nav.njk" import nowPrototypeItNav %}
+{%- from "now-prototype-it-design-system/components/label.njk" import nowPrototypeItLabel -%}
+{%- from "now-prototype-it-design-system/components/radio-buttons.njk" import nowPrototypeItRadioButtons -%}
+{%- from "now-prototype-it-design-system/components/submit-button.njk" import nowPrototypeItSubmitButton -%}
+{%- from "now-prototype-it-design-system/components/text-input.njk" import nowPrototypeItTextInput -%}
+{%- from "now-prototype-it-design-system/components/plugin-card.njk" import nowPrototypeItPluginCard -%}
+{%- from "now-prototype-it-design-system/components/header.njk" import nowPrototypeItHeader -%}
+{%- from "now-prototype-it-design-system/components/nav.njk" import nowPrototypeItNav -%}
 
 <!DOCTYPE html>
-<html class="nowprototypeit-page no-js {{ htmlClasses }}">
+<html class="nowprototypeit-page no-js {{ htmlClasses }}" lang="en">
 <head>
   {% block head %}
     {% block meta %}{% endblock %}
@@ -30,6 +30,8 @@
   <link rel="manifest" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/site.webmanifest"/>
   <link rel="mask-icon" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/safari-pinned-tab.svg" color="#5bbad5"/>
   <link rel="shortcut icon" href="{{ nowPrototypeItDesignSystemAssetsPath }}/icons/favicon.ico"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="{{ bodyClasses }}">
 {% block header %}

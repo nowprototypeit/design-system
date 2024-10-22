@@ -5,7 +5,8 @@
     {{ nowPrototypeItLabel({
       for: params.nameAndId,
       text: params.label,
-      hintText: params.hintText
+      hintText: params.hintText,
+      hintHtml: params.hintHtml
     }) }}
     {% for option in params.options %}
       {% set revealId = params.nameAndId ~ '-' ~ loop.index ~ '-reveal'%}

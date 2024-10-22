@@ -2,7 +2,7 @@
   <p class="nowprototypeit-form-label {{ params.classes }} {% if params.hintText %} nowprototypeit-form-label-with-hint {% endif %}"><label {% if params.for %}for="{{ params.for }}"{% endif %} class="nowprototypeit-form-label">
     {{ params.text }}
   </label></p>
-  {% if params.hintText %}
-    <p class="nowprototypeit-form-hint">{{ params.hintText }}</p>
+  {% if params.hintText or params.hintHtml %}
+    <p class="nowprototypeit-form-hint">{{ params.hintText }}{{ params.hintHtml | safe }}</p>
   {% endif %}
 {% endmacro %}

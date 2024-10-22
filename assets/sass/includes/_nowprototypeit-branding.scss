@@ -199,7 +199,7 @@
     padding: 1em;
     font-size: 1.05rem;
     line-height: 1;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   .error-source-code {
@@ -358,6 +358,9 @@
   &:focus {
     border-color: $featureColour;
     outline: 2px solid $featureColour;
+  }
+  &[disabled] {
+    background-color: #f0f0f0;
   }
 }
 
