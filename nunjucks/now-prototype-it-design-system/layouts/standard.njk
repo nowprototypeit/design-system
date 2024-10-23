@@ -59,6 +59,17 @@
   <footer class="nowprototypeit-footer">
     {% block footerContent %}
     {% endblock %}
+    {{ nowPrototypeItNav({
+      items: [
+        { url: "https://nowprototype.it/privacy", name: "Privacy" },
+        { url: "https://nowprototype.it/terms", name: "Terms" }
+      ],
+      navClasses: "nowprototypeit-legal-links",
+      listClasses: "nowprototypeit-manage-prototype-navigation__list nowprototypeit-legal-links-list",
+      itemClasses: "nowprototypeit-manage-prototype-navigation__list-item nowprototypeit-legal-links-list-item",
+      pinToTop: true
+    }) }}
+
     <p class="nowprototypeit-footer-copyright"><small>&copy;2024 Now Prototype It</small></p>
   </footer>
 {% endblock %}

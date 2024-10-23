@@ -1,5 +1,5 @@
 {% macro nowPrototypeItNav(config) %}
-  <nav>
+  <nav class="{{ config.navClasses }}">
     <ul class="{{ config.listClasses }}">
       {% for item in config.items %}
         <li class="{{ config.itemClasses }} {% if item.isCurrentPage %} {{ config.currentItemClasses }} {% endif %}"><a href="{{ item.url }}"

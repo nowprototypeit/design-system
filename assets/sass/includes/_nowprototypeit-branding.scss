@@ -480,3 +480,23 @@
 .nowprototypeit-sub-nav-divider-header {
   @include now-prototype-it-title-font;
 }
+
+.nowprototypeit-legal-links-list {
+  padding: 1rem 0 0;
+  border-bottom: 0 none;
+  margin: 1rem 0 0;
+}
+
+.nowprototypeit-legal-links-list {
+  line-height: 1;
+}
+
+.nowprototypeit-legal-links {
+  display: inline-block;
+  margin-right: 1rem;
+  width: auto;
+}
+
+.nowprototypeit-legal-links + .nowprototypeit-footer-copyright {
+  display: inline-block;
+}
