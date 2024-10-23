@@ -482,9 +482,9 @@
 }
 
 .nowprototypeit-legal-links-list {
-  padding: 1rem 0 0;
+  padding: 0 1rem;
   border-bottom: 0 none;
-  margin: 1rem 0 0;
+  margin: 0;
 }
 
 .nowprototypeit-legal-links-list {
@@ -493,10 +493,17 @@
 
 .nowprototypeit-legal-links {
   display: inline-block;
-  margin-right: 1rem;
+  margin: 1rem;
+  padding: 0;
   width: auto;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
-.nowprototypeit-legal-links + .nowprototypeit-footer-copyright {
-  display: inline-block;
+.nowprototypeit-page .nowprototypeit-footer-copyright {
+  display: block;
+  float: right;
+  margin: 27px 0 0;
+  font-size: 0.95rem;
 }
