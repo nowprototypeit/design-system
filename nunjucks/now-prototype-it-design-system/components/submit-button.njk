@@ -13,6 +13,9 @@
     class="nowprototypeit-form-submit-button"
     name="{{ params.nameAndId }}"
     id="{{ params.nameAndId }}"
+    {% if params.value %}
+      value="{{ params.value }}"
+    {% endif %}
     {% if params.formAction %}
       formaction="{{ params.formAction }}"
     {% endif %}
