@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .nowprototypeit-page,
 .nowprototypeit-page * {
   box-sizing: border-box;
@@ -9,10 +12,10 @@
 .nowprototypeit-footer {
   margin: 0;
   padding: 0 1rem;
-  color: $fontColor;
+  color: variables.$fontColor;
 
   main {
-    background: $backgroundColour;
+    background: variables.$backgroundColour;
     padding: 2em;
     min-height: 70vh;
 
@@ -38,7 +41,7 @@
 }
 
 .nowprototypeit-page {
-  @include now-prototype-it-body-font;
+  @include mixins.now-prototype-it-body-font;
   font-size: 20px;
 }
 
@@ -51,52 +54,52 @@
 }
 
 .nowprototypeit-grid-column-one-quarter {
-  @include column(25%);
+  @include mixins.column(25%);
 }
 
 .nowprototypeit-grid-column-one-quarter-first {
-  @include column(25%, true);
+  @include mixins.column(25%, true);
 }
 
 .nowprototypeit-grid-column-three-quarters {
-  @include column(75%);
+  @include mixins.column(75%);
 }
 
 .nowprototypeit-grid-column-three-quarters-first {
-  @include column(75%, true);
+  @include mixins.column(75%, true);
 }
 
 .nowprototypeit-grid-column-one-third {
-  @include column(33.3%);
+  @include mixins.column(33.3%);
 }
 
 .nowprototypeit-grid-column-one-third-first {
-  @include column(33.3%, true);
+  @include mixins.column(33.3%, true);
 }
 
 .nowprototypeit-grid-column-two-thirds {
-  @include column(66.6%);
+  @include mixins.column(66.6%);
 }
 
 .nowprototypeit-grid-column-two-thirds-first {
-  @include column(66.6%, true);
+  @include mixins.column(66.6%, true);
 }
 
 .nowprototypeit-grid-column-full-width {
-  @include column(100%);
+  @include mixins.column(100%);
 }
 
 .nowprototypeit-grid-column-full-width-first {
-  @include column(100%, true);
+  @include mixins.column(100%, true);
 }
 
 .nowprototypeit-grid-column-readable-width {
-  @include column(100%);
+  @include mixins.column(100%);
   max-width: 65rem;
 }
 
 .nowprototypeit-grid-column-readable-width {
-  @include column(100%, true);
+  @include mixins.column(100%, true);
   max-width: 65rem;
 }
 
@@ -114,7 +117,7 @@
 }
 
 .nowprototypeit-header {
-  border-bottom: 2px solid $darkFeatureColour;
+  border-bottom: 2px solid variables.$darkFeatureColour;
 
   a {
     max-width: 600px;
@@ -153,14 +156,14 @@
 }
 
 .nowprototypeit-footer {
-  border-top: 1px solid $darkFeatureColour;
+  border-top: 1px solid variables.$darkFeatureColour;
 }
 
 .nowprototypeit-page {
   a,
   a:hover,
   a:visited {
-    color: $featureColour;
+    color: variables.$featureColour;
     text-decoration: none;
   }
 
@@ -173,14 +176,14 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @include now-prototype-it-title-font;
+    @include mixins.now-prototype-it-title-font;
     font-size: 1.6rem;
-    margin: $standardSpace 0;
+    margin: variables.$standardSpace 0;
     padding: 0;
   }
 
   h1 {
-    font-size: $standardSpace;
+    font-size: variables.$standardSpace;
   }
 
   p, a {
@@ -195,7 +198,7 @@
 
   code pre {
     font-family: "Cutive Mono", monospace;
-    border: 3px solid $featureColour;
+    border: 3px solid variables.$featureColour;
     padding: 1em;
     font-size: 1.05rem;
     line-height: 1;
@@ -204,7 +207,7 @@
 
   .error-source-code {
     font-family: "Cutive Mono", monospace;
-    border: 3px solid $featureColour;
+    border: 3px solid variables.$featureColour;
     padding: 1em;
     line-height: 1.3;
     display: grid;
@@ -213,14 +216,14 @@
 
   .error-source-code__line-number--highlighted,
   .error-source-code__line-contents--highlighted {
-    background: $errorColor;
-    color: $lightFontColor;
+    background: variables.$errorColor;
+    color: variables.$lightFontColor;
   }
 
   .error-description {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    border: 1px dotted $darkFeatureColour;
+    border: 1px dotted variables.$darkFeatureColour;
     dt {
       font-weight: 500;
       padding-left: 1rem;
@@ -235,7 +238,7 @@
       }
     }
     dt, dd {
-      border-top: 1px dotted $darkFeatureColour;
+      border-top: 1px dotted variables.$darkFeatureColour;
       margin: 0;
       &:first-of-type {
         border-top: 0 none;
@@ -266,7 +269,7 @@
   text-align: center;
   margin: 0;
   padding: 0 0 0 1.32rem;
-  border-bottom: 2px solid $darkFeatureColour;
+  border-bottom: 2px solid variables.$darkFeatureColour;
 }
 
 .nowprototypeit-manage-prototype-navigation__list-item {
@@ -280,22 +283,22 @@
     height: 1px;
     position: absolute;
     bottom: 0.3em;
-    left: calc($standardSpace/4);
-    right: calc($standardSpace/4);
+    left: calc(variables.$standardSpace/4);
+    right: calc(variables.$standardSpace/4);
   }
 
   &.nowprototypeit-manage-prototype-navigation__list-item--current a:after {
-    background: $darkFeatureColour;
-    box-shadow: $darkFeatureColour 0 0 0;
+    background: variables.$darkFeatureColour;
+    box-shadow: variables.$darkFeatureColour 0 0 0;
   }
 
   a:hover {
     .nowprototypeit-page & {
-      color: $featureColour;
+      color: variables.$featureColour;
     }
     &:after {
-      background: $featureColour;
-      box-shadow: $featureColour 0 0 0;
+      background: variables.$featureColour;
+      box-shadow: variables.$featureColour 0 0 0;
     }
   }
 
@@ -303,11 +306,11 @@
   a:hover,
   a:visited,
   a:focus {
-    @include now-prototype-it-body-font;
+    @include mixins.now-prototype-it-body-font;
     font-size: 0.9rem;
     font-weight: 400;
     padding: 0.3em;
-    margin: calc($standardSpace/4);
+    margin: calc(variables.$standardSpace/4);
     border: 4px solid transparent;
     color: inherit;
     text-decoration: none;
@@ -332,19 +335,19 @@
 
 .nowprototypeit-form-hint {
   .nowprototypeit-page &, & {
-    margin: 0 0 calc($standardSpace/3);
+    margin: 0 0 calc(variables.$standardSpace/3);
     padding: 0;
   }
   opacity: 0.6;
 }
 
 .nowprototypeit-form-text-input {
-  border: 2px solid $darkFeatureColour;
+  border: 2px solid variables.$darkFeatureColour;
   background: transparent;
   font-size: inherit;
   color: inherit;
-  margin: 0 0 calc($standardSpace/2) 0;
-  padding: calc($standardSpace/6) calc($standardSpace/3);
+  margin: 0 0 calc(variables.$standardSpace/2) 0;
+  padding: calc(variables.$standardSpace/6) calc(variables.$standardSpace/3);
   border-radius: 0;
   width: 100%;
   max-width: 25rem;
@@ -353,31 +356,31 @@
   }
   &:focus,
   &.nowprototypeit-form-text-input-changed {
-    color: $featureColour;
+    color: variables.$featureColour;
   }
   &:focus {
-    border-color: $featureColour;
-    outline: 2px solid $featureColour;
+    border-color: variables.$featureColour;
+    outline: 2px solid variables.$featureColour;
   }
 }
 
 .nowprototypeit-form-submit-button,
 .nowprototypeit-form-submit-button-link {
-  border: 2px solid $darkFeatureColour;
+  border: 2px solid variables.$darkFeatureColour;
   background: transparent;
   font-size: inherit;
   color: inherit;
-  margin: $standardSpace 0;
-  padding: calc($standardSpace/6) calc($standardSpace/3);
+  margin: variables.$standardSpace 0;
+  padding: calc(variables.$standardSpace/6) calc(variables.$standardSpace/3);
 
   &:hover,
   &:focus {
-    background: $featureColour;
-    border-color: $featureColour;
+    background: variables.$featureColour;
+    border-color: variables.$featureColour;
     cursor: pointer;
-    outline: 2px solid $featureColour;
+    outline: 2px solid variables.$featureColour;
     .nowprototypeit-page &, & {
-      color: $lightFontColor;
+      color: variables.$lightFontColor;
       text-decoration: none;
     }
   }
@@ -393,18 +396,18 @@
 }
 
 .now-prototype-it-visually-hidden {
-  @include visuallyHidden;
+  @include mixins.visuallyHidden;
 }
 
 
 .nowprototypeit-no-js {
   .js-only {
-    @include visuallyHidden;
+    @include mixins.visuallyHidden;
   }
 }
 .nowprototypeit-js-enabled {
   .js-hidden {
-    @include visuallyHidden;
+    @include mixins.visuallyHidden;
   }
 }
 
@@ -417,11 +420,11 @@
 
 .nowprototypeit-sub-nav-item {
   display: block;
-  padding: calc($standardSpace/4) 0;
-  border-bottom: 1px dotted $darkFeatureColour;
+  padding: calc(variables.$standardSpace/4) 0;
+  border-bottom: 1px dotted variables.$darkFeatureColour;
 
   &.nowprototypeit-sub-nav-item__first {
-    border-top: 1px dotted $darkFeatureColour;
+    border-top: 1px dotted variables.$darkFeatureColour;
   }
 
   &.nowprototypeit-sub-nav-item__current {
@@ -439,24 +442,24 @@
 }
 
 .nowprototypeit-form-item-wrapper {
-  margin-bottom: $standardSpace;
+  margin-bottom: variables.$standardSpace;
 }
 
 .nowprototypeit-form-item-wrapper-tiny-gap-bottom {
   button, input, .nowprototypeit-page &, & {
-    margin-bottom: calc($standardSpace/10);
+    margin-bottom: calc(variables.$standardSpace/10);
   }
 }
 
 .nowprototypeit-form-item-wrapper-tiny-gap-top {
   button, input, .nowprototypeit-page &, & {
-    margin-top: calc($standardSpace/10);
+    margin-top: calc(variables.$standardSpace/10);
   }
 }
 
 .nowprototypeit-info-box {
-  padding: $standardSpace;
-  border: 2px solid $featureColour;
+  padding: variables.$standardSpace;
+  border: 2px solid variables.$featureColour;
   line-height: 1.6;
   border-radius: 0;
   box-shadow: 0 0 0 0;
@@ -473,12 +476,12 @@
 //}
 
 .nowprototypeit-sub-nav-divider {
-  padding-top: $standardSpace;
-  padding-bottom: $standardSpace;
+  padding-top: variables.$standardSpace;
+  padding-bottom: variables.$standardSpace;
 }
 
 .nowprototypeit-sub-nav-divider-header {
-  @include now-prototype-it-title-font;
+  @include mixins.now-prototype-it-title-font;
 }
 
 .nowprototypeit-legal-links-list {
