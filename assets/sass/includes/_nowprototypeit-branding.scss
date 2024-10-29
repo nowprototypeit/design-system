@@ -334,11 +334,11 @@
 }
 
 .nowprototypeit-form-hint {
+  opacity: 0.6;
   .nowprototypeit-page &, & {
     margin: 0 0 calc(variables.$standardSpace/3);
     padding: 0;
   }
-  opacity: 0.6;
 }
 
 .nowprototypeit-form-text-input {
