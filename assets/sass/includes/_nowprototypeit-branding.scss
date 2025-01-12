@@ -161,14 +161,15 @@
 
 .nowprototypeit-page {
   a,
+  a:link,
   a:hover,
   a:visited {
     color: variables.$featureColour;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration-thickness: 0.12em;
   }
 
   ul {
