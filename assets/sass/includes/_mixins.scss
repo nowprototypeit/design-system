@@ -1,7 +1,5 @@
-@use "variables";
-
 @mixin now-prototype-it-body-font {
-  color: variables.$fontColor;
+  color: $fontColor;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 300;
   line-height: 1.8;
@@ -20,7 +18,7 @@
   padding: 0;
   float: left;
   @if (not $isFirst) {
-    padding-left: variables.$standardSpace;
+    padding-left: $standardSpace;
   }
   &:after {
     content: ' '
