@@ -5,9 +5,12 @@
 {% from "now-prototype-it-design-system/components/plugin-card.njk" import nowPrototypeItPluginCard %}
 {% from "now-prototype-it-design-system/components/header.njk" import nowPrototypeItHeader %}
 {% from "now-prototype-it-design-system/components/nav.njk" import nowPrototypeItNav %}
+{% from "now-prototype-it-design-system/components/errors.njk" import nowPrototypeItErrors %}
+
+{% set copyrightYear = copyrightYear | default("2026") %}
 
 <!DOCTYPE html>
-<html lang="en" class="nowprototypeit-page no-js {{ htmlClasses }}">
+<html class="nowprototypeit-page no-js {{ htmlClasses }}" lang="en">
 <head>
   {% block head %}
     {% block meta %}{% endblock %}
@@ -71,13 +74,15 @@
         pinToTop: true
       }) }}
     {% endif %}
-    <p class="nowprototypeit-footer-copyright {% if isWebsite %}nowprototypeit-website-footer-copyright{% endif %}"><small>&copy;2024 Now Prototype It</small></p>
+    <p class="nowprototypeit-footer-copyright {% if isWebsite %}nowprototypeit-website-footer-copyright{% endif %}"><small>&copy;{{ copyrightYear }} Now Prototype It Limited</small></p>
   </footer>
 {% endblock %}
 {% block bodyEnd %}
   {% block scripts %}
     {% if nowPrototypeItScriptInclude %}
       {% include nowPrototypeItScriptInclude %}
+    {% else %}
+      <script src="{{ nowPrototypeItDesignSystemAssetsPath }}/scripts/all.js"></script>
     {% endif %}
     {% block pageScripts %}{% endblock %}
   {% endblock %}
