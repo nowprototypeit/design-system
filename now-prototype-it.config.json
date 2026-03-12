@@ -12,20 +12,22 @@
         }
       },
       {
-        "value": "{{SCRIPTS_NJK_INCLUDE}}",
+        "value": "{{STYLES_NJK_INCLUDE}}",
         "variableNames": {
           "nunjucks": "nowPrototypeItStylesheetInclude"
         }
       },
       {
-        "value": "{{STYLES_NJK_INCLUDE}}",
+        "value": "{{SCRIPTS_NJK_INCLUDE}}",
         "variableNames": {
           "nunjucks": "nowPrototypeItScriptInclude"
         }
       }
     ],
     "sass": [
-      "/assets/sass/styles.scss"
+      {
+        "path": "/now-prototype-it-kit-integration/npi-integration.scss"
+      }
     ],
     "assets": [
       "/assets/images",
@@ -44,6 +46,14 @@
       {
         "macroName": "nowPrototypeItRadioButtons",
         "importFrom": "now-prototype-it-design-system/components/radio-buttons.njk"
+      },
+      {
+        "macroName": "nowPrototypeItCheckboxes",
+        "importFrom": "now-prototype-it-design-system/components/checkboxes.njk"
+      },
+      {
+        "macroName": "nowPrototypeItErrors",
+        "importFrom": "now-prototype-it-design-system/components/errors.njk"
       },
       {
         "macroName": "nowPrototypeItSubmitButton",
@@ -75,11 +85,6 @@
       {
         "name": "Manage Prototype form",
         "path": "now-prototype-it-kit-integration/templates/manage-prototype/form.njk",
-        "type": "nunjucks"
-      },
-      {
-        "name": "Manage Prototype plugins",
-        "path": "now-prototype-it-kit-integration/templates/manage-prototype/plugin-page.njk",
         "type": "nunjucks"
       },
       {

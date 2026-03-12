@@ -1,7 +1,10 @@
-@import "includes/variables";
+@forward 'includes/config';
+@forward 'includes/variables';
+@forward 'includes/mixins';
 
-@import "includes/mixins";
+@use 'includes/config' as config;
+@use 'includes/variables' as variables;
 
-@import "includes/fonts";
-
-@import "includes/nowprototypeit-branding";
+@use "includes/fonts";
+@use "includes/nowprototypeit-branding";
+@use "includes/forms";

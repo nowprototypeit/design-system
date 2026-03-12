@@ -1,6 +1,14 @@
 {% extends "now-prototype-it-design-system/layouts/manage-prototype.njk" %}
 
 {% block content %}
+    {{ nowPrototypeItErrors({
+        titleText: 'Please correct the following errors',
+        errorList: [
+            { text: 'Something wrong with the text field', href: '#example1' },
+            { text: 'Example error message 2', href: '#example2' },
+            { text: 'Did you know you can click these?', href: '#example3' }
+        ]
+    }) }}
     <h1>This is a form</h1>
     <p>Please consider your answers carefully as any wrong answers will be held against you indefinitely.</p>
     <form action="?" method="post">
@@ -19,8 +27,78 @@
             ],
             value: 'option2'
         }) }}
+        {{ nowPrototypeItCheckboxes({
+            nameAndId: 'example3',
+            label: 'Here are multiple options',
+            options: [
+                { value: 'optionA', text: 'Option A' },
+                { value: 'optionB', text: 'Option B', checked: true },
+                { value: 'optionC', html: 'This can include links, e.g. to a <strong><a href="https://nowprototype.it/privacy" target="_blank">privacy policy</a></strong>', checked: true }
+            ],
+            value: 'option2'
+        }) }}
         {{ nowPrototypeItSubmitButton({
             text: 'I\'ve finished filling out this form'
         }) }}
     </form>
+    <h3>Page scrolling</h3>
+
+    <p>It's not always obvious that the error links have scrolled the page, so here's a bunch of extra content to make it easier to see.</p>
+
+    <h3>Lorum Ipsum</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices sed justo euismod aliquam. Cras
+          malesuada nisl eu tellus auctor vulputate. Proin at tempus lacus. Aenean eu molestie nisl. Vestibulum eget velit
+          sed lacus posuere efficitur ut eget arcu. Nulla ultricies ante felis. Aliquam nec orci non lacus commodo
+          tincidunt vitae at lectus.</p>
+
+      <p>Sed facilisis enim et tellus accumsan, ut vestibulum odio placerat. Cras fermentum turpis magna, ac accumsan
+          sapien condimentum at. Cras malesuada neque ac mauris condimentum, ut accumsan arcu pulvinar. In auctor finibus
+          risus eu dapibus. Proin sagittis ligula quis odio accumsan, in vestibulum nunc pharetra. Morbi feugiat sit amet
+          magna efficitur hendrerit. Maecenas mauris lacus, laoreet quis sem a, ultricies vehicula lacus. Praesent ac
+          egestas magna, vitae sodales urna. Duis vel accumsan felis, vitae feugiat tortor. Aliquam dapibus, est ac
+          vehicula egestas, purus tortor laoreet erat, eget tempor ligula nisl ut mi.</p>
+
+      <ul>
+          <li>Vestibulum at libero non ipsum consequat rutrum vel at sapien</li>
+          <li>Integer porttitor ornare ultricies. Pellentesque</li>
+          <li>vitae risus nulla. Mauris laoreet tincidunt aliquam</li>
+      </ul>
+      <p>It's not always obvious that the error links have scrolled the page, so here's a bunch of extra content to make it easier to see.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices sed justo euismod aliquam. Cras
+          malesuada nisl eu tellus auctor vulputate. Proin at tempus lacus. Aenean eu molestie nisl. Vestibulum eget velit
+          sed lacus posuere efficitur ut eget arcu. Nulla ultricies ante felis. Aliquam nec orci non lacus commodo
+          tincidunt vitae at lectus.</p>
+
+      <p>Sed facilisis enim et tellus accumsan, ut vestibulum odio placerat. Cras fermentum turpis magna, ac accumsan
+          sapien condimentum at. Cras malesuada neque ac mauris condimentum, ut accumsan arcu pulvinar. In auctor finibus
+          risus eu dapibus. Proin sagittis ligula quis odio accumsan, in vestibulum nunc pharetra. Morbi feugiat sit amet
+          magna efficitur hendrerit. Maecenas mauris lacus, laoreet quis sem a, ultricies vehicula lacus. Praesent ac
+          egestas magna, vitae sodales urna. Duis vel accumsan felis, vitae feugiat tortor. Aliquam dapibus, est ac
+          vehicula egestas, purus tortor laoreet erat, eget tempor ligula nisl ut mi.</p>
+
+      <ul>
+          <li>Vestibulum at libero non ipsum consequat rutrum vel at sapien</li>
+          <li>Integer porttitor ornare ultricies. Pellentesque</li>
+          <li>vitae risus nulla. Mauris laoreet tincidunt aliquam</li>
+      </ul>
+      <p>It's not always obvious that the error links have scrolled the page, so here's a bunch of extra content to make it easier to see.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultrices sed justo euismod aliquam. Cras
+          malesuada nisl eu tellus auctor vulputate. Proin at tempus lacus. Aenean eu molestie nisl. Vestibulum eget velit
+          sed lacus posuere efficitur ut eget arcu. Nulla ultricies ante felis. Aliquam nec orci non lacus commodo
+          tincidunt vitae at lectus.</p>
+
+      <p>Sed facilisis enim et tellus accumsan, ut vestibulum odio placerat. Cras fermentum turpis magna, ac accumsan
+          sapien condimentum at. Cras malesuada neque ac mauris condimentum, ut accumsan arcu pulvinar. In auctor finibus
+          risus eu dapibus. Proin sagittis ligula quis odio accumsan, in vestibulum nunc pharetra. Morbi feugiat sit amet
+          magna efficitur hendrerit. Maecenas mauris lacus, laoreet quis sem a, ultricies vehicula lacus. Praesent ac
+          egestas magna, vitae sodales urna. Duis vel accumsan felis, vitae feugiat tortor. Aliquam dapibus, est ac
+          vehicula egestas, purus tortor laoreet erat, eget tempor ligula nisl ut mi.</p>
+
+      <ul>
+          <li>Vestibulum at libero non ipsum consequat rutrum vel at sapien</li>
+          <li>Integer porttitor ornare ultricies. Pellentesque</li>
+          <li>vitae risus nulla. Mauris laoreet tincidunt aliquam</li>
+      </ul>
 {% endblock %}

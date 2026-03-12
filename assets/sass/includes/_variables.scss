@@ -1,5 +1,6 @@
-$now-prototype-it-design-system-assets-url: "/assets" !default;
-$fonts-url: $now-prototype-it-design-system-assets-url + "/fonts" !default;
+@use 'config' as config;
+
+$fonts-url: config.$assets-url-for-variables + "/fonts" !default;
 $backgroundColour: #FFFFFF !default;
 $featureColour: #35529c !default;
 $darkFeatureColour: #1b2441 !default;
