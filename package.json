@@ -1,6 +1,6 @@
 {
   "name": "@nowprototypeit/design-system",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The design system we use for Now Prototype It projects, it's a plugin to nowprototypeit.",
   "main": "index.js",
   "sass": "assets/sass/styles.scss",
