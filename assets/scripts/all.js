@@ -57,7 +57,7 @@ if (window.Promise) {
           console.log('updating', $button.checked, $reveal, $button)
           if ($button.checked) {
             $reveal.classList.remove('js-hidden')
-            $reveal.scrollIntoView({ behavior: 'smooth' })
+            $button.scrollIntoView({ behavior: 'smooth' })
           } else {
             $reveal.classList.add('js-hidden')
           }

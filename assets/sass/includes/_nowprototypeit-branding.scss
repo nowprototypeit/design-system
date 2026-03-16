@@ -218,13 +218,21 @@
     overflow-x: scroll;
   }
 
-  .error-source-code {
+  .nowprototypeit-error-summary, .error-source-code {
     font-family: "Cutive Mono", monospace;
+  }
+
+  .error-source-code {
     border: 3px solid variables.$featureColour;
     padding: 1em;
     line-height: 1.3;
     display: grid;
     grid-template-columns: 1fr 100fr;
+    overflow-x: scroll;
+  }
+
+  .error-source-code__line-contents {
+    white-space: pre;
   }
 
   .error-source-code__line-number--highlighted,
@@ -248,9 +256,13 @@
       padding-right: 1rem;
       overflow-wrap: break-word;
 
-      li {
-        overflow-wrap: anywhere;
-        margin-bottom: 1.5rem;
+      ul {
+        font-size: inherit;
+        margin-top: 0.5rem;
+        li {
+          overflow-wrap: anywhere;
+          margin-bottom: 0.5rem;
+        }
       }
     }
 

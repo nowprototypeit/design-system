@@ -56,7 +56,9 @@
 }
 
 .nowprototypeit-form-submit-button,
-.nowprototypeit-form-submit-button-link {
+.nowprototypeit-form-submit-button-link,
+.nowprototypeit-global-styles .nowprototypeit-form-submit-button,
+.nowprototypeit-global-styles .nowprototypeit-form-submit-button-link {
   border: 2px solid variables.$darkFeatureColour;
   text-decoration: none;
   background: transparent;
@@ -97,7 +99,6 @@
 .nowprototypeit-form-radio-wrapper,
 .nowprototypeit-form-checkbox-wrapper {
   position: relative;
-  display: flex;
   align-items: center;
   margin: .25rem 0;
 
@@ -145,6 +146,10 @@
 
 .nowprototypeit-form-radio-wrapper input[type="radio"] + label::before {
   border-radius: 50%;
+}
+
+.nowprototypeit-form-conditional-reveal {
+  margin-top: 1.5rem;
 }
 
 .nowprototypeit-error{
